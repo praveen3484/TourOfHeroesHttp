@@ -17,7 +17,7 @@ export class HeroService
         //http.get returns an RxJS Observable. Observables are a powerful way to manage asynchronous data flows
         return this.http.get(this.heroesUrl)
                     .toPromise()//, you've converted the Observable to a Promise using the toPromise operator.
-                    .then(response => response.json().data as Hero[])//In the Promise's then() callback, you call the json method of the HTTP Response to extract the data within the response
+                    .then(response => response.json() as Hero[])//In the Promise's then() callback, you call the json method of the HTTP Response to extract the data within the response
                     .catch(this.handleError);
     } 
     
@@ -26,7 +26,7 @@ export class HeroService
        const url =`${this.heroesUrl}/${id}`;
         return this.http.get(url)
                     .toPromise()
-                    .then(response => response.json().data as Hero)
+                    .then(response => response.json() as Hero)
                     .catch(this.handleError);
    }
 
@@ -35,7 +35,7 @@ export class HeroService
         return this.http
                     .post(this.heroesUrl, JSON.stringify({name : name}), {headers : this.headers})
                     .toPromise()
-                    .then(res => res.json().data as Hero)
+                    .then(res => res.json() as Hero)
                     .catch(this.handleError);
     }
 
