@@ -10,7 +10,7 @@ import { Hero } from '../heroes/hero';
 export class DashboardComponent implements OnInit {
   heroes : Hero[]=[];   //Define a heroes array property.
   constructor(private heroService : HeroService) { } //Inject the HeroService in the constructor and hold it in a private heroService field.
-
+  isShown = false;
   ngOnInit(): void 
   {
     //Call the service to get heroes inside the Angular ngOnInit() lifecycle hook.

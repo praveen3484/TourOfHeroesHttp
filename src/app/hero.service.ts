@@ -13,7 +13,6 @@ export class HeroService
 
     getHeroes() : Promise<Hero[]> //stub
     {
-        debugger;
         //http.get returns an RxJS Observable. Observables are a powerful way to manage asynchronous data flows
         return this.http.get(this.heroesUrl)
                     .toPromise()//, you've converted the Observable to a Promise using the toPromise operator.
