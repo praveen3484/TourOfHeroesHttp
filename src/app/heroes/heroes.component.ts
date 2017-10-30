@@ -30,7 +30,7 @@ export class HeroesComponent implements OnInit {
      this.heroService
           .getHeroes()
           .then(heroes => this.heroes = heroes);//The callback sets the component's heroes 
-    console.log(this.heroes);
+
           //property to the array of heroes returned by the service.
   } 
 
