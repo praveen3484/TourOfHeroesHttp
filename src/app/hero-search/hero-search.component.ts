@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroSearchService } from '../hero-search.service';
 import { Observable } from 'rxjs/Observable';
 
 // Observable class extensions
@@ -12,6 +11,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import { Hero } from '../heroes/hero';
 import { Subject } from 'rxjs/Subject';
 import { Router } from '@angular/router';
+import { HeroSearchService } from '../services/hero-search.service';
 
 @Component({
   selector: 'hero-search',

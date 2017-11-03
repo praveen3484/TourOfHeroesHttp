@@ -1,7 +1,7 @@
 import { Component , OnInit} from '@angular/core';
 import { Hero } from './hero';
-import { HeroService } from '../hero.service';
 import { Router } from '@angular/router';
+import { HeroService } from '../services/hero.service';
 
 
 @Component({
@@ -25,7 +25,6 @@ export class HeroesComponent implements OnInit {
   }
     
   getHeroes(): void{
-    debugger;
     
      this.heroService
           .getHeroes()
